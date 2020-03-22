@@ -106,7 +106,7 @@ When you start your app project, this folder is pre-populated with three `.R`: `
 During the process of building your application, all the core functionalities of your app will go there: you'll put there the content of your modules (with `golem::add_modules()`) and the utilitarian / business logic functions you'll build with `golem::add_utils()` and `golem::add_fct()`. 
 If you want to add a standard file (that is to say out of `{golem}` nomenclature), you can call `usethis::use_r("name")`, which create a `R/name.R` file. 
 
-All your `.R` file should go there, with the only exception of the files you'll create when deploying to RStudio products: these processes needing an `app.R` at the root of the project, the `golem::add_rstudioconnect_file()` will bypass this ".R only in R/" rule to add a file at your package root. 
+All your `.R` files should go there, with the only exception of the files you'll create when deploying to RStudio products: these processes needing an `app.R` at the root of the project, the `golem::add_rstudioconnect_file()` will bypass this ".R only in R/" rule to add a file at your package root. 
 Good news is that `{golem}` also knows that a package with an `app.R` at its root can't build, so this file is added to the `.Rbuildignore`.
 
 If you've been building classic Shiny Apps, you've been use to `source()` your R files at the beginning of your `app.R` or `ui.R/server.R`. 
